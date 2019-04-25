@@ -1,0 +1,15 @@
+https://youtu.be/2czElo8a7FM
+10:20am-11:10am - Istio Service Mesh - Moscone - Salon 20
+
+
+crd = configurable resource definition
+
+adding a vm to istio
+
+https://istio.io/docs/examples/integrating-vms/
+https://istio.io/docs/setup/kubernetes/additional-setup/mesh-expansion/
+
+can implement istio on postgres on VM's
+
+
+

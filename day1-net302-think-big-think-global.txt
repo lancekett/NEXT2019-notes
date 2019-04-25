@@ -1,0 +1,65 @@
+https://youtu.be/HSotO10NJKk
+net302
+tuesday - 3:40pm
+think big, think global.
+
+region - RTT of <1ms
+
+layer 7 reverse proxies 
+ - deployed at the edge 
+ - CDN done here
+
+single global IP
+
+routes to the closest zone wirh available capacity
+
+ddos protection
+uses stabilized anycast
+
+
+access to peered vpn from on-prem via VPN???????
+
+---
+cloud DNS private zones
+---
+
+private zones resoltion for vpn resources
+
+support split horizon
+supports stackdriver for private zone queries
+
+net204 - hybrid connectivity.
+
+DNS peering between VPCs
+
+DNS peering - use a project hub, and then DNS peering to the 'spoke' projects. that way the IP can be forwarded and allowed from a single project. 
+
+
+cardinal health
+ - setup 2 host projects. 
+  - prod
+  - non-prod
+ - 100's of service projects
+  - service projects are bound to one host project
+  - might have 2 projects, one for each region. east / west
+  - selected subnets gran 'compute.networks.use' permission to service projects.
+ - value of host projects
+  - network managers manage a few projects
+   - interconnects vpns, vpcs, routers, subnet address management, etc. 
+   - centralized appliacnces for internet ingress / egress
+   - create new subnets non-disruptively with controlled rollout fto selecto 
+  - centralized firewall rule management. (with self-services)
+   - service account based firewall rules
+   - network tags for pre-approved opt-in patterns
+    - (i.e. internal web server, allows 80/443 to internal web serves)
+   - cloud functions monitor for aberrant patterns, and enforce compliance. 
+ - value
+  - accoutnability with fiscal responsibility at service project level
+  - devops teams create VM instances and GCP managed services 
+  - org policy prohibits service projects from creating anything with an external IP. 
+
+
+
+
+
+

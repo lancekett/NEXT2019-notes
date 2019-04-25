@@ -1,0 +1,40 @@
+https://youtu.be/tJ-Ay-0lTRU
+wednesday 11:00am-11:50am - Delivering Hybrid Cloud Environments with GKE on-prem - palace hotel - level 1, gold
+matt tavis - sr solutions architect
+tobias palmborg - cto - netent
+
+packet.net? - demo is thre
+
+binary authorization
+
+knative = cloud run?? 
+
+network policies = calico
+can use stackdriver or EFK
+
+uses f5 LTM for network access and load balancing, including ingress VIPs, control plane VIP and service VIPs.
+
+only ubuntu, not COS
+
+network policy = calico
+
+gke connect / hub 
+ - the agent that gives you central management into GCP console. 
+
+istio is used by default for some internal stuff, but you can deploy a whole istio 'thing'
+
+"Expose" doesn't auto populate the internal IP? 
+
+anthos config management - git based, central configuration. 
+ - configured as an k8s operator
+
+
+Google still supports the cluster master and control plane.
+
+can you use GLB with an F5 on the backend? 
+
+questions: 
+bare metal? cisco? 
+vmware? 
+storage? 
+

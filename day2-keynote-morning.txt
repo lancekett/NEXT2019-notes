@@ -1,0 +1,29 @@
+https://youtu.be/wHvL_48ZhM8
+"security key" in your phone. - what is this??
+
+need to re-watch first 20minutes.
+
+managed microsoft SQL 
+managed service for microsoft AD. managed Domain Controllers.
+later this year
+
+managed security? 
+
+cloud data fusion
+ - seems like a fancy, gui, "serverless" visual way to get data from databases into BQ.
+ - is this the same thing as datapump? how are they different? 
+
+BQ AI engine
+ - available through data studio.
+
+connected sheets - gsuite, brings BQ to sheets
+
+autoML tables - beta
+
+autoML
+ - automl video
+ - automl tables
+
+
+left at 10:30am, at the sales pitchy part of mcesson customer story. 
+

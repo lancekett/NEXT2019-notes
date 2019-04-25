@@ -1,0 +1,77 @@
+https://youtu.be/XDmdwwTjJbc
+tuesday 12:45pm 
+Weston Hutchins - GCP
+Kyle Basset - Arctiq - sales? 
+Dan Dyer - optiva - customer
+
+kubernetes is a place to start building a platform, 
+
+buulding blocks
+ - knative - 
+ - istio
+ - kubernetes
+
+anthos hosted control plane, running on GCP
+
+on prem stuff runs on vmware.
+
+optiva
+ - http://optiva.com/charging-engine/
+
+
+gke on-prem arch
+
+gkectl prepare
+gkectl setup
+
+this creates an on-prem "control plane"
+gkectl create cluster
+
+register it with GCP
+RBAC seems to work
+
+external connectivity works with an internal agent. without need for VPN or interconnect.
+
+still uses helm templates.
+
+not multi-master yet. 
+
+can use the f5 controller for an ingress controller
+ - can't use your own load balancer yet, still uses f5.
+ - f5 is the front end, still using istio as a service mesh.
+
+stackdriver - works
+
+GLB - in the future? 
+
+harbor - repo for artifacts. 
+
+
+storage - vsphere cloud provider.  - k8s storage operator?
+persistant volume claim - creates persistant storage to create vmdk's to attach to nodes. - 
+
+
+putting out a blog for git-ops, aka, pipeline for infrastructure. 
+
+networking
+each cluster is an island
+using bgp for node-to-node communications
+calico
+more?!?
+
+
+ensure you have enodun memory / cpu
+disable DRS whenusing lots of PV's
+deploy monitoring / trending tools
+tune metrics and logs
+cluster deployment and test automation
+enterprise registry solution or GCR
+PKI and secret management
+cluster access - IAM, ADFS etc. intergration
+significant reuse of exising helm chart and ansible scripts
+
+dns and service discovery?
+can ci like gitlab pipelines reach into on-prem gke api's?
+state?
+network storage?
+

@@ -1,0 +1,34 @@
+11:40am-12:30am - Bring K8s, istio - traffic director, envoy to brownfield. - Moscone South, Lower Level, Salon 9
+
+put OMI in the google cloud load balancer, with an apigee gateway behind it. 
+ - but this puts apigee in front of 
+
+route that to on-prem gtc web servers. 
+
+
+add istio?  
+ - can we add istio between GTC web -> GTC DB?
+
+
+traffic director - global
+ - gcp managed prod grade control plane
+
+
+traffic director seems similar to istio
+ - they're both control plan
+
+global
+ - http(s) LB 
+ - SSL proxy
+ - TCP proxy
+ - traffic directory
+
+regional 
+ - network LB
+ - internal L4 LB
+ - internal L7 LB
+
+knative = similar to cloud run
+same api's and tooling as k8s?
+
+

@@ -1,0 +1,43 @@
+https://youtu.be/wHvL_48ZhM8
+net208 - internal network access
+tuesday 5pm 
+
+1) private google access (google infrastructure)
+ - GCS, cloud spanner, bigquery
+ - google frontend proxy
+ - setup
+  - advertise a new prefix
+   - create network? advertise through bgp?
+  - make dns changes
+   - 1) confiure your on-prem dns server to resolve *.googleapis.com as a cname to restricted.googleapis.com
+   - 2) cloud dns private zone. 
+
+ - "restricted.googleapis.com"
+
+2) managed service with VPC peering
+ - https://cloud.google.com/sql/docs/postgres/private-ip
+ - cloud sql, private GKE clusters
+
+by default, static and dynamic routes aren't exchanged with VPC peering
+ - there's an import/export flag for these routes to exchange with VPN peers
+
+create a transit VPC?
+ - can be used as a "hub" for peering to all other projects. 
+ - no bandwith limit
+ - vpc peering is free. (but is it really?,) 
+  - 
+
+3) private services access (infra built in GCP (redis, netapp, cloud sql, etc))
+ - now in GA
+ - will have a single "service" VPC?
+ - smallest is a /24, they recommend a bigger range, so each service can have a smaller range.
+ - option called "private IP" on creation of a managed service. 
+  - will create a network within the bigger service VPC range.
+
+ - shared VPC support (host/service projects)
+  - only needs to be asked permission for the first service
+  - 
+
+4) netapp
+ - 
+

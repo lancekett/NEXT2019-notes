@@ -1,0 +1,36 @@
+Wed 3:30pm - 4:20
+reduce dependancy on AD. 
+
+cloud identity session was done yesterday - watch this
+
+"enabling beyondcorp"
+ - no trust networks
+ - 
+
+partners
+ - papercut
+ - pfsense
+ - jenkins
+ - gitlab
+ - splunk
+ - jamf
+
+
+adding "client" per app. specify which ou's it can auth / read / etc. or all.. generates a cert, and then turn it on.
+then change the client . 
+the app will only need a cert to access ldap
+
+SAASPass. - handles SSO and password management
+
+cloud armor = described as an ip blacklist. 
+
+announcing a cloud based GCDS soon.
+
+cloud identity supports managing mobile devices, and desktop support added soon.
+
+
+questions: 
+ - can we extend the schema, and add an attribue for a user? 
+ - can you use a system like okta or duo with secure ldap. 
+ - can we setup a radius server to point to secure LDAP?
+

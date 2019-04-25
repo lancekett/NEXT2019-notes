@@ -1,0 +1,30 @@
+https://www.youtube.com/watch?v=0UyrVqBoCAU&feature=youtu.be
+Seth Vargo
+@sethvargo
+
+devops manifesto
+ - reduce organizational silos
+ - accept failure as normal
+ - implement gradual change
+ - levage tooling & automation
+ - measure everything
+
+invest in work that will give long term improvements.
+
+"automate this years job away"
+
+SLI vs SLA vs SLO
+
+error budgets
+
+allowable risk dictates slo
+
+when slo is not met, SRE's drop the support back to the developers.
+
+Toil 
+ - manual, repetitive, automatable, tactival, devoid of long-term value.
+
+
+he's going around with a talk called how many 9's of security does your system have
+
+

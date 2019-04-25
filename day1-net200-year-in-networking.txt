@@ -1,0 +1,101 @@
+https://youtu.be/gNx2iMhOm7Q
+2:20pm - a year in networking
+
+private zones
+dns forwarding
+
+performance vs cost 
+ - premium network goes over Goog's network
+ - standard exits google ASAP and goes over the internet
+https://www.cedixis.com/google-reports
+
+GGLB - google global load balancing 
+
+load blaancer - deep dive tomorrow
+ - support for all ports. 
+ - dns based service discovery - 
+ - https - user defined request headers, inserts info like client loatation, rtt into header
+ - quic http/2 gRPC support
+
+security
+ - vpc service controls
+  - solves the problem of not knowing what the traffic is. 
+  - allow or deny api calls based on the source.
+  - api level controls to add the origin of the request as a part of the controls
+ - cloud armor
+  - mitigates DDOS
+  - integrates with global HTTPS load balancer. 
+ - cloud nat
+  - control outbound access per application
+  - can define static addresses for which public IP are used. (outbound whitelisted to partners)
+ - google managed certs.
+  - beta
+  - renewed certs automatically
+  - sounds like lets encrypt.
+    - yep
+  - revoke when LB is deleted.
+  - works with gce and gke
+ - vpn flow logs
+  - metrics 
+   - throughput 
+   - rtt
+  - annotated with 
+  - goes to stackdriver and/or bigquery
+ - firewall rule logging. 
+  - log allow / deny , ingress / egress
+  - annotated, VM name + firewall name.
+  - logs every connection, not sampled
+ - GKE / istio
+  - vpn native clusters
+  - alias ips for pods and services
+  - allows networking for k8s pods over vpn / DI
+  - network endpoint group.
+   - containers are just another endpoint. 
+   - fixes the double hop. 
+    - suboptimal load balancing
+     - double hop problem, iptables is the 2nd hop from the node to a pod on a different node
+  - integration with CDN, IAP, and cloud armor. 
+ - istio
+  - service mesh
+  - mTLS
+  - provision to GKE  
+   - pilor 
+   - mixer 
+   - citadel - handles certs
+
+target 
+ - partner interconnect. 
+ - commerce 
+  - 3 projects
+   - lab
+   - non-prod
+   - prod
+ - applications need to talk to the platform services, in order to get data from the datacetner. 
+  - internet - cdn - application - platform services - data cetners
+ - isolation for more 
+ - commerce 
+  - 56 projects. 
+  - segmentation between applications. 
+  - cloud armore and ssl policies
+  - uses service accounts for soruces and targets for firewall rules
+ - vpc service controls
+  - draw perimeter arond the projects with similar data classifications, to prevent cross project traffic. 
+ - interconnect.
+  - vpn - goes over the interenet
+   - use vpn for non-commerce
+  - partner interconnect for commerce
+ - cloud armor
+  - target guests -> cdn edge (fastly) -> WAF, routing, logging, cache -> cloud load balancing -> cloud armor -> GCE
+  - cloud load balancing - whitelisted for just fastly, hq offices, and data centers
+ - firewall logs.
+  - export to GCS for forensics
+*- restricted internal API's (/30 netblock)
+  - 
+
+arc208 - pci compliance to production with a hybrid cloud - target , wed 
+googlenext-NET200@target.com - email with questions.
+
+
+vpc flow logs 
+ - how does it work with GKE?
+  
