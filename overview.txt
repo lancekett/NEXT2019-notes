@@ -32,8 +32,15 @@ istio can be run on VM's
  - potentially adding postgres to a "service mesh" with our apps. 
  - agent based.
 
+apigee - hybrid
+ - splits apigee's proxy/magic into 2 parts, management plane, and a runtime plane.
+  - management plane runs in apigee's GCP.
+  - on-prem runtime plane can be deployed on any k8s environment (including GKE on-prem / anthos)
+ - provides all the apigee systems and advantages in an on-prem environment.
+
 High Capacity transfer for on-prem data. 
  - spoke with a Google product manager for storage, and scheduled meeting 2 weeks after NEXT
  - they have a pre-alpha offering around transfering large volumes of data into google cloud storage
  - not really applicable for us at this point in time, but it has potential for long term on-prem -> cloud data transfer.
+
 
